@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_contact_detail_contact_details",
+  "info": {
+    "displayName": "contactDetail"
+  },
+  "options": {},
+  "attributes": {
+    "detail": {
+      "type": "string"
+    }
+  }
+}

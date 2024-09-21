@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_navlinks_navlinks",
+  "info": {
+    "displayName": "Navlinks",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Link": {
+      "type": "string"
+    }
+  }
+}

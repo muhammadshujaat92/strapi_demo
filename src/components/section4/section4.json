@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_section4_section4s",
+  "info": {
+    "displayName": "section4"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Paragraph": {
+      "type": "text"
+    },
+    "sideBox": {
+      "displayName": "box",
+      "type": "component",
+      "repeatable": true,
+      "component": "box.box"
+    }
+  }
+}

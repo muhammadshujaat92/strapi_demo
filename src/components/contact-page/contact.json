@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_contact_page_contacts",
+  "info": {
+    "displayName": "contact",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "Theme": {
+      "type": "string"
+    },
+    "headingTheme": {
+      "type": "string"
+    }
+  }
+}

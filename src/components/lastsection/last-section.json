@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_lastsection_last_sections",
+  "info": {
+    "displayName": "lastSection"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Heading": {
+      "type": "string"
+    },
+    "Paragraph": {
+      "type": "text"
+    },
+    "contactDetail": {
+      "displayName": "contactDetail",
+      "type": "component",
+      "repeatable": true,
+      "component": "contact-detail.contact-detail"
+    }
+  }
+}

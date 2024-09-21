@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_card_data_cards",
+  "info": {
+    "displayName": "card"
+  },
+  "options": {},
+  "attributes": {
+    "oldPrice2": {
+      "type": "string"
+    },
+    "oldPrice3": {
+      "type": "string"
+    },
+    "Sale": {
+      "type": "boolean"
+    }
+  }
+}

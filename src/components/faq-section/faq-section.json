@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_faq_section_faq_sections",
+  "info": {
+    "displayName": "FAQSection",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "BackImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "FrontImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "frontText1": {
+      "type": "string"
+    },
+    "frontText2": {
+      "type": "string"
+    },
+    "Heading1": {
+      "type": "string"
+    },
+    "Heading2": {
+      "type": "string"
+    },
+    "Text": {
+      "type": "text"
+    },
+    "AccordianData": {
+      "displayName": "faqContent",
+      "type": "component",
+      "repeatable": true,
+      "component": "faq-content.faq-content"
+    }
+  }
+}

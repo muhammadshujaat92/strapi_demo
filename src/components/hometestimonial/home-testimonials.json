@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_hometestimonial_home_testimonials",
+  "info": {
+    "displayName": "HomeTestimonials",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "Paragraph": {
+      "type": "text"
+    },
+    "userImages": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "testimonialContent": {
+      "displayName": "Content",
+      "type": "component",
+      "repeatable": true,
+      "component": "contents.content"
+    }
+  }
+}

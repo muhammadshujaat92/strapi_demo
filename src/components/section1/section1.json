@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_section1_section1s",
+  "info": {
+    "displayName": "Section1"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Paragraph": {
+      "type": "text"
+    },
+    "ButtonText": {
+      "type": "string"
+    },
+    "BackgroundImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "BackgroundImageTitle": {
+      "type": "string"
+    }
+  }
+}

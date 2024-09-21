@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_section5_section5s",
+  "info": {
+    "displayName": "Section5",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "BoxHeading1": {
+      "type": "string"
+    },
+    "BoxHeading2": {
+      "type": "string"
+    },
+    "BoxText1": {
+      "type": "string"
+    },
+    "BoxText2": {
+      "type": "string"
+    },
+    "content": {
+      "displayName": "boxSide",
+      "type": "component",
+      "repeatable": true,
+      "component": "box-side.box-side"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_slides_header_slides",
+  "info": {
+    "displayName": "HeaderSlides"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Paragraph": {
+      "type": "text"
+    },
+    "ButtonText": {
+      "type": "string"
+    },
+    "Category": {
+      "type": "string"
+    }
+  }
+}
