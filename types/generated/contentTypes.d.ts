@@ -1106,6 +1106,7 @@ export interface ApiHomePageSection8HomePageSection8
     singularName: 'home-page-section8';
     pluralName: 'home-page-section8s';
     displayName: 'homePageSection8';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1117,6 +1118,7 @@ export interface ApiHomePageSection8HomePageSection8
     Heading1: Attribute.String;
     Heading2: Attribute.String;
     accordian: Attribute.Component<'accordian-data.accordian', true>;
+    text: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1148,7 +1150,6 @@ export interface ApiHomePageSection9HomePageSection9
     draftAndPublish: true;
   };
   attributes: {
-    Title: Attribute.String;
     Heading: Attribute.String;
     Paragraph: Attribute.Text;
     email: Attribute.String;

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "home-page-section8",
     "pluralName": "home-page-section8s",
-    "displayName": "homePageSection8"
+    "displayName": "homePageSection8",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,14 +19,15 @@
       "type": "string"
     },
     "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "Heading1": {
       "type": "string"
@@ -38,6 +40,9 @@
       "type": "component",
       "repeatable": true,
       "component": "accordian-data.accordian"
+    },
+    "text": {
+      "type": "text"
     }
   }
 }
