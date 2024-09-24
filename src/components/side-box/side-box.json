@@ -1,7 +1,8 @@
 {
   "collectionName": "components_side_box_side_boxes",
   "info": {
-    "displayName": "sideBox"
+    "displayName": "sideBox",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -9,7 +10,7 @@
       "type": "string"
     },
     "lowerText": {
-      "type": "string"
+      "type": "text"
     }
   }
 }

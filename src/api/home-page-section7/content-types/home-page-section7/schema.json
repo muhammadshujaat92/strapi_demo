@@ -4,7 +4,8 @@
   "info": {
     "singularName": "home-page-section7",
     "pluralName": "home-page-section7s",
-    "displayName": "homePageSection7"
+    "displayName": "homePageSection7",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,14 +19,15 @@
       "type": "text"
     },
     "userImages": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "testimonialContent": {
       "displayName": "testimonialContent",

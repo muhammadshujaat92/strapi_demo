@@ -4,7 +4,8 @@
   "info": {
     "singularName": "home-page-section9",
     "pluralName": "home-page-section9s",
-    "displayName": "homePageSection9"
+    "displayName": "homePageSection9",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,7 +19,7 @@
       "type": "string"
     },
     "Paragraph": {
-      "type": "string"
+      "type": "text"
     },
     "email": {
       "type": "string"
@@ -28,6 +29,9 @@
     },
     "address": {
       "type": "string"
+    },
+    "text": {
+      "type": "text"
     }
   }
 }

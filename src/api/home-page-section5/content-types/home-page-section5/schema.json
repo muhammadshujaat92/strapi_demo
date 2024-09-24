@@ -4,7 +4,8 @@
   "info": {
     "singularName": "home-page-section5",
     "pluralName": "home-page-section5s",
-    "displayName": "homePageSection5"
+    "displayName": "homePageSection5",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true

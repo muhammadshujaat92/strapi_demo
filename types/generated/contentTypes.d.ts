@@ -998,6 +998,7 @@ export interface ApiHomePageSection5HomePageSection5
     singularName: 'home-page-section5';
     pluralName: 'home-page-section5s';
     displayName: 'homePageSection5';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1067,6 +1068,7 @@ export interface ApiHomePageSection7HomePageSection7
     singularName: 'home-page-section7';
     pluralName: 'home-page-section7s';
     displayName: 'homePageSection7';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1140,6 +1142,7 @@ export interface ApiHomePageSection9HomePageSection9
     singularName: 'home-page-section9';
     pluralName: 'home-page-section9s';
     displayName: 'homePageSection9';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1147,10 +1150,11 @@ export interface ApiHomePageSection9HomePageSection9
   attributes: {
     Title: Attribute.String;
     Heading: Attribute.String;
-    Paragraph: Attribute.String;
+    Paragraph: Attribute.Text;
     email: Attribute.String;
     phoneNum: Attribute.String;
     address: Attribute.String;
+    text: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

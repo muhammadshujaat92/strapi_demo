@@ -22,9 +22,10 @@ export interface TestimonialContentTestimonialContent extends Schema.Component {
   collectionName: 'components_testimonial_content_testimonial_contents';
   info: {
     displayName: 'testimonialContent';
+    description: '';
   };
   attributes: {
-    ReviewText: Attribute.String;
+    ReviewText: Attribute.Text;
     AuthorName: Attribute.String;
     AuthorDesignation: Attribute.String;
     AuthorCountry: Attribute.String;
@@ -48,10 +49,11 @@ export interface SideBoxSideBox extends Schema.Component {
   collectionName: 'components_side_box_side_boxes';
   info: {
     displayName: 'sideBox';
+    description: '';
   };
   attributes: {
     upperText: Attribute.String;
-    lowerText: Attribute.String;
+    lowerText: Attribute.Text;
   };
 }
 

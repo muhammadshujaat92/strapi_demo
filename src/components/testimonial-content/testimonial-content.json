@@ -1,12 +1,13 @@
 {
   "collectionName": "components_testimonial_content_testimonial_contents",
   "info": {
-    "displayName": "testimonialContent"
+    "displayName": "testimonialContent",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "ReviewText": {
-      "type": "string"
+      "type": "text"
     },
     "AuthorName": {
       "type": "string"
