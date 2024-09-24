@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_testimonial_content_testimonial_contents",
+  "info": {
+    "displayName": "testimonialContent"
+  },
+  "options": {},
+  "attributes": {
+    "ReviewText": {
+      "type": "string"
+    },
+    "AuthorName": {
+      "type": "string"
+    },
+    "AuthorDesignation": {
+      "type": "string"
+    },
+    "AuthorCountry": {
+      "type": "string"
+    }
+  }
+}

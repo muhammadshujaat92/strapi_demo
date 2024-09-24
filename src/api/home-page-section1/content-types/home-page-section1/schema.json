@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_page_section1s",
+  "info": {
+    "singularName": "home-page-section1",
+    "pluralName": "home-page-section1s",
+    "displayName": "homePageSection1",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slideTitle": {
+      "type": "string"
+    },
+    "slideText": {
+      "type": "text"
+    },
+    "slideButtonText": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    }
+  }
+}

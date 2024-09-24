@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_accordian_data_accordians",
+  "info": {
+    "displayName": "accordian"
+  },
+  "options": {},
+  "attributes": {
+    "questionText": {
+      "type": "string"
+    },
+    "answerText": {
+      "type": "text"
+    }
+  }
+}

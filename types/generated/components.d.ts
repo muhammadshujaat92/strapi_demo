@@ -18,6 +18,19 @@ export interface TourPackageCardTourPackageCard extends Schema.Component {
   };
 }
 
+export interface TestimonialContentTestimonialContent extends Schema.Component {
+  collectionName: 'components_testimonial_content_testimonial_contents';
+  info: {
+    displayName: 'testimonialContent';
+  };
+  attributes: {
+    ReviewText: Attribute.String;
+    AuthorName: Attribute.String;
+    AuthorDesignation: Attribute.String;
+    AuthorCountry: Attribute.String;
+  };
+}
+
 export interface SlidesHeaderSlides extends Schema.Component {
   collectionName: 'components_slides_header_slides';
   info: {
@@ -28,6 +41,17 @@ export interface SlidesHeaderSlides extends Schema.Component {
     Paragraph: Attribute.Text;
     ButtonText: Attribute.String;
     Category: Attribute.String;
+  };
+}
+
+export interface SideBoxSideBox extends Schema.Component {
+  collectionName: 'components_side_box_side_boxes';
+  info: {
+    displayName: 'sideBox';
+  };
+  attributes: {
+    upperText: Attribute.String;
+    lowerText: Attribute.String;
   };
 }
 
@@ -178,6 +202,18 @@ export interface ContentsContent extends Schema.Component {
   };
 }
 
+export interface ContentsBoxContent extends Schema.Component {
+  collectionName: 'components_contents_box_contents';
+  info: {
+    displayName: 'BoxContent';
+  };
+  attributes: {
+    Text: Attribute.String;
+    Paragraph: Attribute.Text;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 export interface ContactPageContact extends Schema.Component {
   collectionName: 'components_contact_page_contacts';
   info: {
@@ -246,11 +282,24 @@ export interface BoxBox extends Schema.Component {
   };
 }
 
+export interface AccordianDataAccordian extends Schema.Component {
+  collectionName: 'components_accordian_data_accordians';
+  info: {
+    displayName: 'accordian';
+  };
+  attributes: {
+    questionText: Attribute.String;
+    answerText: Attribute.Text;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'tour-package-card.tour-package-card': TourPackageCardTourPackageCard;
+      'testimonial-content.testimonial-content': TestimonialContentTestimonialContent;
       'slides.header-slides': SlidesHeaderSlides;
+      'side-box.side-box': SideBoxSideBox;
       'section5.section5': Section5Section5;
       'section4.section4': Section4Section4;
       'section2.section2': Section2Section2;
@@ -262,12 +311,14 @@ declare module '@strapi/types' {
       'faq-content.faq-content': FaqContentFaqContent;
       'demo.demo': DemoDemo;
       'contents.content': ContentsContent;
+      'contents.box-content': ContentsBoxContent;
       'contact-page.contact': ContactPageContact;
       'contact-detail.contact-detail': ContactDetailContactDetail;
       'card-data.card': CardDataCard;
       'card-data.card-data': CardDataCardData;
       'box-side.box-side': BoxSideBoxSide;
       'box.box': BoxBox;
+      'accordian-data.accordian': AccordianDataAccordian;
     }
   }
 }

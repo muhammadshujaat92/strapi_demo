@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_page_section7s",
+  "info": {
+    "singularName": "home-page-section7",
+    "pluralName": "home-page-section7s",
+    "displayName": "homePageSection7"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "Paragraph": {
+      "type": "text"
+    },
+    "userImages": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "testimonialContent": {
+      "displayName": "testimonialContent",
+      "type": "component",
+      "repeatable": true,
+      "component": "testimonial-content.testimonial-content"
+    }
+  }
+}

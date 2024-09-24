@@ -884,6 +884,291 @@ export interface ApiHomePageHomePage extends Schema.CollectionType {
   };
 }
 
+export interface ApiHomePageSection1HomePageSection1
+  extends Schema.CollectionType {
+  collectionName: 'home_page_section1s';
+  info: {
+    singularName: 'home-page-section1';
+    pluralName: 'home-page-section1s';
+    displayName: 'homePageSection1';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    slideTitle: Attribute.String;
+    slideText: Attribute.Text;
+    slideButtonText: Attribute.String;
+    category: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::home-page-section1.home-page-section1',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::home-page-section1.home-page-section1',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHomePageSection2HomePageSection2
+  extends Schema.CollectionType {
+  collectionName: 'home_page_section2s';
+  info: {
+    singularName: 'home-page-section2';
+    pluralName: 'home-page-section2s';
+    displayName: 'homePageSection2';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    paragraph: Attribute.Text;
+    buttonText: Attribute.String;
+    backgroundImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    backgroundImageTitle: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::home-page-section2.home-page-section2',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::home-page-section2.home-page-section2',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHomePageSection3HomePageSection3
+  extends Schema.CollectionType {
+  collectionName: 'home_page_section3s';
+  info: {
+    singularName: 'home-page-section3';
+    pluralName: 'home-page-section3s';
+    displayName: 'homePageSection3-4';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.String;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Attribute.String;
+    paragraph: Attribute.Text;
+    buttonText: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::home-page-section3.home-page-section3',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::home-page-section3.home-page-section3',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHomePageSection5HomePageSection5
+  extends Schema.CollectionType {
+  collectionName: 'home_page_section5s';
+  info: {
+    singularName: 'home-page-section5';
+    pluralName: 'home-page-section5s';
+    displayName: 'homePageSection5';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    paragraph: Attribute.Text;
+    sideBox: Attribute.Component<'side-box.side-box', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::home-page-section5.home-page-section5',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::home-page-section5.home-page-section5',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHomePageSection6HomePageSection6
+  extends Schema.CollectionType {
+  collectionName: 'home_page_section6s';
+  info: {
+    singularName: 'home-page-section6';
+    pluralName: 'home-page-section6s';
+    displayName: 'homePageSection6';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    BoxHeading1: Attribute.String;
+    BoxHeading2: Attribute.String;
+    BoxText1: Attribute.String;
+    BoxText2: Attribute.String;
+    content: Attribute.Component<'contents.box-content', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::home-page-section6.home-page-section6',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::home-page-section6.home-page-section6',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHomePageSection7HomePageSection7
+  extends Schema.CollectionType {
+  collectionName: 'home_page_section7s';
+  info: {
+    singularName: 'home-page-section7';
+    pluralName: 'home-page-section7s';
+    displayName: 'homePageSection7';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Heading: Attribute.String;
+    Paragraph: Attribute.Text;
+    userImages: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    testimonialContent: Attribute.Component<
+      'testimonial-content.testimonial-content',
+      true
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::home-page-section7.home-page-section7',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::home-page-section7.home-page-section7',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHomePageSection8HomePageSection8
+  extends Schema.CollectionType {
+  collectionName: 'home_page_section8s';
+  info: {
+    singularName: 'home-page-section8';
+    pluralName: 'home-page-section8s';
+    displayName: 'homePageSection8';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    frontText1: Attribute.String;
+    frontText2: Attribute.String;
+    images: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    Heading1: Attribute.String;
+    Heading2: Attribute.String;
+    accordian: Attribute.Component<'accordian-data.accordian', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::home-page-section8.home-page-section8',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::home-page-section8.home-page-section8',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHomePageSection9HomePageSection9
+  extends Schema.CollectionType {
+  collectionName: 'home_page_section9s';
+  info: {
+    singularName: 'home-page-section9';
+    pluralName: 'home-page-section9s';
+    displayName: 'homePageSection9';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Heading: Attribute.String;
+    Paragraph: Attribute.String;
+    email: Attribute.String;
+    phoneNum: Attribute.String;
+    address: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::home-page-section9.home-page-section9',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::home-page-section9.home-page-section9',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiNavbarNavbar extends Schema.CollectionType {
   collectionName: 'navbars';
   info: {
@@ -1010,6 +1295,14 @@ declare module '@strapi/types' {
       'api::card.card': ApiCardCard;
       'api::contact-us.contact-us': ApiContactUsContactUs;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::home-page-section1.home-page-section1': ApiHomePageSection1HomePageSection1;
+      'api::home-page-section2.home-page-section2': ApiHomePageSection2HomePageSection2;
+      'api::home-page-section3.home-page-section3': ApiHomePageSection3HomePageSection3;
+      'api::home-page-section5.home-page-section5': ApiHomePageSection5HomePageSection5;
+      'api::home-page-section6.home-page-section6': ApiHomePageSection6HomePageSection6;
+      'api::home-page-section7.home-page-section7': ApiHomePageSection7HomePageSection7;
+      'api::home-page-section8.home-page-section8': ApiHomePageSection8HomePageSection8;
+      'api::home-page-section9.home-page-section9': ApiHomePageSection9HomePageSection9;
       'api::navbar.navbar': ApiNavbarNavbar;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
       'api::tour-package.tour-package': ApiTourPackageTourPackage;

@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_page_section3s",
+  "info": {
+    "singularName": "home-page-section3",
+    "pluralName": "home-page-section3s",
+    "displayName": "homePageSection3-4",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "paragraph": {
+      "type": "text"
+    },
+    "buttonText": {
+      "type": "string"
+    }
+  }
+}
