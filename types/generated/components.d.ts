@@ -45,6 +45,18 @@ export interface SlidesHeaderSlides extends Schema.Component {
   };
 }
 
+export interface SideboxSideBox extends Schema.Component {
+  collectionName: 'components_sidebox_side_boxes';
+  info: {
+    displayName: 'sideBox';
+    description: '';
+  };
+  attributes: {
+    UpperText: Attribute.String;
+    LowerText: Attribute.Text;
+  };
+}
+
 export interface SideBoxSideBox extends Schema.Component {
   collectionName: 'components_side_box_side_boxes';
   info: {
@@ -301,6 +313,7 @@ declare module '@strapi/types' {
       'tour-package-card.tour-package-card': TourPackageCardTourPackageCard;
       'testimonial-content.testimonial-content': TestimonialContentTestimonialContent;
       'slides.header-slides': SlidesHeaderSlides;
+      'sidebox.side-box': SideboxSideBox;
       'side-box.side-box': SideBoxSideBox;
       'section5.section5': Section5Section5;
       'section4.section4': Section4Section4;

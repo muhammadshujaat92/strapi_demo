@@ -27,8 +27,8 @@
     "address": {
       "type": "string"
     },
-    "text": {
-      "type": "text"
+    "title": {
+      "type": "string"
     }
   }
 }

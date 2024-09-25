@@ -991,40 +991,6 @@ export interface ApiHomePageSection3HomePageSection3
   };
 }
 
-export interface ApiHomePageSection5HomePageSection5
-  extends Schema.CollectionType {
-  collectionName: 'home_page_section5s';
-  info: {
-    singularName: 'home-page-section5';
-    pluralName: 'home-page-section5s';
-    displayName: 'homePageSection5';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String;
-    paragraph: Attribute.Text;
-    sideBox: Attribute.Component<'side-box.side-box', true>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::home-page-section5.home-page-section5',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::home-page-section5.home-page-section5',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiHomePageSection6HomePageSection6
   extends Schema.CollectionType {
   collectionName: 'home_page_section6s';
@@ -1032,6 +998,7 @@ export interface ApiHomePageSection6HomePageSection6
     singularName: 'home-page-section6';
     pluralName: 'home-page-section6s';
     displayName: 'homePageSection6';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1155,7 +1122,7 @@ export interface ApiHomePageSection9HomePageSection9
     email: Attribute.String;
     phoneNum: Attribute.String;
     address: Attribute.String;
-    text: Attribute.Text;
+    title: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1167,6 +1134,39 @@ export interface ApiHomePageSection9HomePageSection9
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::home-page-section9.home-page-section9',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHomePage5HomePage5 extends Schema.CollectionType {
+  collectionName: 'home_page5s';
+  info: {
+    singularName: 'home-page5';
+    pluralName: 'home-page5s';
+    displayName: 'HomePageSection5';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    paragraph: Attribute.Text;
+    data: Attribute.Component<'sidebox.side-box', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::home-page5.home-page5',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::home-page5.home-page5',
       'oneToOne',
       'admin::user'
     > &
@@ -1303,11 +1303,11 @@ declare module '@strapi/types' {
       'api::home-page-section1.home-page-section1': ApiHomePageSection1HomePageSection1;
       'api::home-page-section2.home-page-section2': ApiHomePageSection2HomePageSection2;
       'api::home-page-section3.home-page-section3': ApiHomePageSection3HomePageSection3;
-      'api::home-page-section5.home-page-section5': ApiHomePageSection5HomePageSection5;
       'api::home-page-section6.home-page-section6': ApiHomePageSection6HomePageSection6;
       'api::home-page-section7.home-page-section7': ApiHomePageSection7HomePageSection7;
       'api::home-page-section8.home-page-section8': ApiHomePageSection8HomePageSection8;
       'api::home-page-section9.home-page-section9': ApiHomePageSection9HomePageSection9;
+      'api::home-page5.home-page5': ApiHomePage5HomePage5;
       'api::navbar.navbar': ApiNavbarNavbar;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
       'api::tour-package.tour-package': ApiTourPackageTourPackage;

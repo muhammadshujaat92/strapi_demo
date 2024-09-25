@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sidebox_side_boxes",
+  "info": {
+    "displayName": "sideBox",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "UpperText": {
+      "type": "string"
+    },
+    "LowerText": {
+      "type": "text"
+    }
+  }
+}

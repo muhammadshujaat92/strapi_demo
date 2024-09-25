@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "home_page_section5s",
+  "collectionName": "home_page5s",
   "info": {
-    "singularName": "home-page-section5",
-    "pluralName": "home-page-section5s",
-    "displayName": "homePageSection5",
+    "singularName": "home-page5",
+    "pluralName": "home-page5s",
+    "displayName": "HomePageSection5",
     "description": ""
   },
   "options": {
@@ -18,11 +18,11 @@
     "paragraph": {
       "type": "text"
     },
-    "sideBox": {
+    "data": {
       "displayName": "sideBox",
       "type": "component",
       "repeatable": true,
-      "component": "side-box.side-box"
+      "component": "sidebox.side-box"
     }
   }
 }
