@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_blog_data_blog_data",
+  "info": {
+    "displayName": "blogData",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "btnText": {
+      "type": "string"
+    },
+    "cardImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

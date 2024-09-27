@@ -788,6 +788,73 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiBlogContentBlogContent extends Schema.CollectionType {
+  collectionName: 'blog_contents';
+  info: {
+    singularName: 'blog-content';
+    pluralName: 'blog-contents';
+    displayName: 'blogContent';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Heading: Attribute.String;
+    paragraph1: Attribute.Text;
+    paragraph2: Attribute.Text;
+    title: Attribute.String;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::blog-content.blog-content',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::blog-content.blog-content',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiBlogPageBlogPage extends Schema.CollectionType {
+  collectionName: 'blog_pages';
+  info: {
+    singularName: 'blog-page';
+    pluralName: 'blog-pages';
+    displayName: 'BlogPage';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    bannerImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    bannerHeading: Attribute.String;
+    cardData: Attribute.Component<'blog-data.blog-data', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::blog-page.blog-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::blog-page.blog-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCardCard extends Schema.CollectionType {
   collectionName: 'cards';
   info: {
@@ -877,296 +944,6 @@ export interface ApiHomePageHomePage extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::home-page.home-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiHomePageSection1HomePageSection1
-  extends Schema.CollectionType {
-  collectionName: 'home_page_section1s';
-  info: {
-    singularName: 'home-page-section1';
-    pluralName: 'home-page-section1s';
-    displayName: 'homePageSection1';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    slideTitle: Attribute.String;
-    slideText: Attribute.Text;
-    slideButtonText: Attribute.String;
-    category: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::home-page-section1.home-page-section1',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::home-page-section1.home-page-section1',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiHomePageSection2HomePageSection2
-  extends Schema.CollectionType {
-  collectionName: 'home_page_section2s';
-  info: {
-    singularName: 'home-page-section2';
-    pluralName: 'home-page-section2s';
-    displayName: 'homePageSection2';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String;
-    paragraph: Attribute.Text;
-    buttonText: Attribute.String;
-    backgroundImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    backgroundImageTitle: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::home-page-section2.home-page-section2',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::home-page-section2.home-page-section2',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiHomePageSection3HomePageSection3
-  extends Schema.CollectionType {
-  collectionName: 'home_page_section3s';
-  info: {
-    singularName: 'home-page-section3';
-    pluralName: 'home-page-section3s';
-    displayName: 'homePageSection3-4';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    heading: Attribute.String;
-    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    title: Attribute.String;
-    paragraph: Attribute.Text;
-    buttonText: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::home-page-section3.home-page-section3',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::home-page-section3.home-page-section3',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiHomePageSection6HomePageSection6
-  extends Schema.CollectionType {
-  collectionName: 'home_page_section6s';
-  info: {
-    singularName: 'home-page-section6';
-    pluralName: 'home-page-section6s';
-    displayName: 'homePageSection6';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    Title: Attribute.String;
-    BoxHeading1: Attribute.String;
-    BoxHeading2: Attribute.String;
-    BoxText1: Attribute.String;
-    BoxText2: Attribute.String;
-    content: Attribute.Component<'contents.box-content', true>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::home-page-section6.home-page-section6',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::home-page-section6.home-page-section6',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiHomePageSection7HomePageSection7
-  extends Schema.CollectionType {
-  collectionName: 'home_page_section7s';
-  info: {
-    singularName: 'home-page-section7';
-    pluralName: 'home-page-section7s';
-    displayName: 'homePageSection7';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    Heading: Attribute.String;
-    Paragraph: Attribute.Text;
-    userImages: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    testimonialContent: Attribute.Component<
-      'testimonial-content.testimonial-content',
-      true
-    >;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::home-page-section7.home-page-section7',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::home-page-section7.home-page-section7',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiHomePageSection8HomePageSection8
-  extends Schema.CollectionType {
-  collectionName: 'home_page_section8s';
-  info: {
-    singularName: 'home-page-section8';
-    pluralName: 'home-page-section8s';
-    displayName: 'homePageSection8';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    frontText1: Attribute.String;
-    frontText2: Attribute.String;
-    images: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    Heading1: Attribute.String;
-    Heading2: Attribute.String;
-    accordian: Attribute.Component<'accordian-data.accordian', true>;
-    text: Attribute.Text;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::home-page-section8.home-page-section8',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::home-page-section8.home-page-section8',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiHomePageSection9HomePageSection9
-  extends Schema.CollectionType {
-  collectionName: 'home_page_section9s';
-  info: {
-    singularName: 'home-page-section9';
-    pluralName: 'home-page-section9s';
-    displayName: 'homePageSection9';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    Heading: Attribute.String;
-    Paragraph: Attribute.Text;
-    email: Attribute.String;
-    phoneNum: Attribute.String;
-    address: Attribute.String;
-    title: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::home-page-section9.home-page-section9',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::home-page-section9.home-page-section9',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiHomePage5HomePage5 extends Schema.CollectionType {
-  collectionName: 'home_page5s';
-  info: {
-    singularName: 'home-page5';
-    pluralName: 'home-page5s';
-    displayName: 'HomePageSection5';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String;
-    paragraph: Attribute.Text;
-    data: Attribute.Component<'sidebox.side-box', true>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::home-page5.home-page5',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::home-page5.home-page5',
       'oneToOne',
       'admin::user'
     > &
@@ -1297,17 +1074,11 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::blog-content.blog-content': ApiBlogContentBlogContent;
+      'api::blog-page.blog-page': ApiBlogPageBlogPage;
       'api::card.card': ApiCardCard;
       'api::contact-us.contact-us': ApiContactUsContactUs;
       'api::home-page.home-page': ApiHomePageHomePage;
-      'api::home-page-section1.home-page-section1': ApiHomePageSection1HomePageSection1;
-      'api::home-page-section2.home-page-section2': ApiHomePageSection2HomePageSection2;
-      'api::home-page-section3.home-page-section3': ApiHomePageSection3HomePageSection3;
-      'api::home-page-section6.home-page-section6': ApiHomePageSection6HomePageSection6;
-      'api::home-page-section7.home-page-section7': ApiHomePageSection7HomePageSection7;
-      'api::home-page-section8.home-page-section8': ApiHomePageSection8HomePageSection8;
-      'api::home-page-section9.home-page-section9': ApiHomePageSection9HomePageSection9;
-      'api::home-page5.home-page5': ApiHomePage5HomePage5;
       'api::navbar.navbar': ApiNavbarNavbar;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
       'api::tour-package.tour-package': ApiTourPackageTourPackage;

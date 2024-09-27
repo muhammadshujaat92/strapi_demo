@@ -296,6 +296,20 @@ export interface BoxBox extends Schema.Component {
   };
 }
 
+export interface BlogDataBlogData extends Schema.Component {
+  collectionName: 'components_blog_data_blog_data';
+  info: {
+    displayName: 'blogData';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    btnText: Attribute.String;
+    cardImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 export interface AccordianDataAccordian extends Schema.Component {
   collectionName: 'components_accordian_data_accordians';
   info: {
@@ -333,6 +347,7 @@ declare module '@strapi/types' {
       'card-data.card-data': CardDataCardData;
       'box-side.box-side': BoxSideBoxSide;
       'box.box': BoxBox;
+      'blog-data.blog-data': BlogDataBlogData;
       'accordian-data.accordian': AccordianDataAccordian;
     }
   }
