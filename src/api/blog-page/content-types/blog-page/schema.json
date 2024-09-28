@@ -25,12 +25,6 @@
     },
     "bannerHeading": {
       "type": "string"
-    },
-    "cardData": {
-      "displayName": "blogData",
-      "type": "component",
-      "repeatable": true,
-      "component": "blog-data.blog-data"
     }
   }
 }

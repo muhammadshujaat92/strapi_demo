@@ -794,16 +794,17 @@ export interface ApiBlogContentBlogContent extends Schema.CollectionType {
     singularName: 'blog-content';
     pluralName: 'blog-contents';
     displayName: 'blogContent';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    Heading: Attribute.String;
-    paragraph1: Attribute.Text;
-    paragraph2: Attribute.Text;
-    title: Attribute.String;
-    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    BlogCardImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    BlogCardTitle: Attribute.String;
+    BlogCardDescription: Attribute.Text;
+    BlogCardButtonText: Attribute.String;
+    blogData: Attribute.Component<'blog-data.blog-data'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -836,7 +837,6 @@ export interface ApiBlogPageBlogPage extends Schema.CollectionType {
   attributes: {
     bannerImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     bannerHeading: Attribute.String;
-    cardData: Attribute.Component<'blog-data.blog-data', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

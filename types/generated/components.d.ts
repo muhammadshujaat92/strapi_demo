@@ -300,13 +300,13 @@ export interface BlogDataBlogData extends Schema.Component {
   collectionName: 'components_blog_data_blog_data';
   info: {
     displayName: 'blogData';
-    description: '';
   };
   attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
-    btnText: Attribute.String;
-    cardImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    bannerImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    bannerHeading: Attribute.String;
+    Title: Attribute.String;
+    paragraph1: Attribute.Text;
+    paragraph2: Attribute.Text;
   };
 }
 

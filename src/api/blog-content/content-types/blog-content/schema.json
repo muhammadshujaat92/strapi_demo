@@ -4,34 +4,39 @@
   "info": {
     "singularName": "blog-content",
     "pluralName": "blog-contents",
-    "displayName": "blogContent"
+    "displayName": "blogContent",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Heading": {
-      "type": "string"
-    },
-    "paragraph1": {
-      "type": "text"
-    },
-    "paragraph2": {
-      "type": "text"
-    },
-    "title": {
-      "type": "string"
-    },
-    "image": {
+    "BlogCardImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "BlogCardTitle": {
+      "type": "string"
+    },
+    "BlogCardDescription": {
+      "type": "text"
+    },
+    "BlogCardButtonText": {
+      "type": "string"
+    },
+    "blogData": {
+      "displayName": "blogData",
+      "type": "component",
+      "repeatable": false,
+      "component": "blog-data.blog-data"
     }
   }
 }
