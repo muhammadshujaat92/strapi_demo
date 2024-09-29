@@ -36,12 +36,14 @@ export interface SlidesHeaderSlides extends Schema.Component {
   collectionName: 'components_slides_header_slides';
   info: {
     displayName: 'HeaderSlides';
+    description: '';
   };
   attributes: {
     Title: Attribute.String;
     Paragraph: Attribute.Text;
     ButtonText: Attribute.String;
     Category: Attribute.String;
+    ButtonLink: Attribute.String;
   };
 }
 

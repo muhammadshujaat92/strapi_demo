@@ -25,6 +25,9 @@
     },
     "bannerHeading": {
       "type": "string"
+    },
+    "FormHeading": {
+      "type": "string"
     }
   }
 }

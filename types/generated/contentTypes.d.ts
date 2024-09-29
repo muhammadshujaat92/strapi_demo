@@ -837,6 +837,7 @@ export interface ApiBlogPageBlogPage extends Schema.CollectionType {
   attributes: {
     bannerImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     bannerHeading: Attribute.String;
+    FormHeading: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
