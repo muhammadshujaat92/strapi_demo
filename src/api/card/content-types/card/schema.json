@@ -48,7 +48,8 @@
       "type": "enumeration",
       "enum": [
         "homePage",
-        "tourPage"
+        "tourPage",
+        "tour&homePage"
       ]
     }
   }

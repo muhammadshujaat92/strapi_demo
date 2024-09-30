@@ -876,7 +876,7 @@ export interface ApiCardCard extends Schema.CollectionType {
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     buttonText: Attribute.String;
     Days: Attribute.String;
-    showCard: Attribute.Enumeration<['homePage', 'tourPage']>;
+    showCard: Attribute.Enumeration<['homePage', 'tourPage', 'tour&homePage']>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
