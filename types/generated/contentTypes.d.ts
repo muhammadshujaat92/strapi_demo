@@ -868,7 +868,14 @@ export interface ApiCardCard extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    TourPackageCard: Attribute.Component<'tour-package-card.tour-package-card'>;
+    title: Attribute.String;
+    description: Attribute.Text;
+    price: Attribute.String;
+    oldPrice: Attribute.String;
+    Sale: Attribute.Boolean;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    buttonText: Attribute.String;
+    Days: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

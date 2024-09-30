@@ -12,11 +12,36 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "TourPackageCard": {
-      "displayName": "TourPackageCard",
-      "type": "component",
-      "repeatable": false,
-      "component": "tour-package-card.tour-package-card"
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "price": {
+      "type": "string"
+    },
+    "oldPrice": {
+      "type": "string"
+    },
+    "Sale": {
+      "type": "boolean"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "buttonText": {
+      "type": "string"
+    },
+    "Days": {
+      "type": "string"
     }
   }
 }
