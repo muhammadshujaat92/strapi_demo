@@ -45,7 +45,11 @@
       "type": "string"
     },
     "showCard": {
-      "type": "boolean"
+      "type": "enumeration",
+      "enum": [
+        "homePage",
+        "tourPage"
+      ]
     }
   }
 }
