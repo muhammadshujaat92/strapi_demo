@@ -28,20 +28,24 @@
       "type": "boolean"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "buttonText": {
       "type": "string"
     },
     "Days": {
       "type": "string"
+    },
+    "showCard": {
+      "type": "boolean"
     }
   }
 }

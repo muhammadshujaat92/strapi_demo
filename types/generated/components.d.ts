@@ -1,5 +1,19 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface TestimonialContentTestimonialContent extends Schema.Component {
+  collectionName: 'components_testimonial_content_testimonial_contents';
+  info: {
+    displayName: 'testimonialContent';
+    description: '';
+  };
+  attributes: {
+    ReviewText: Attribute.Text;
+    AuthorName: Attribute.String;
+    AuthorDesignation: Attribute.String;
+    AuthorCountry: Attribute.String;
+  };
+}
+
 export interface TourPackageCardTourPackageCard extends Schema.Component {
   collectionName: 'components_tour_package_card_tour_package_cards';
   info: {
@@ -15,20 +29,6 @@ export interface TourPackageCardTourPackageCard extends Schema.Component {
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     buttonText: Attribute.String;
     Days: Attribute.String;
-  };
-}
-
-export interface TestimonialContentTestimonialContent extends Schema.Component {
-  collectionName: 'components_testimonial_content_testimonial_contents';
-  info: {
-    displayName: 'testimonialContent';
-    description: '';
-  };
-  attributes: {
-    ReviewText: Attribute.Text;
-    AuthorName: Attribute.String;
-    AuthorDesignation: Attribute.String;
-    AuthorCountry: Attribute.String;
   };
 }
 
@@ -184,27 +184,6 @@ export interface FaqSectionFaqSection extends Schema.Component {
   };
 }
 
-export interface FaqContentFaqContent extends Schema.Component {
-  collectionName: 'components_faq_content_faq_contents';
-  info: {
-    displayName: 'faqContent';
-  };
-  attributes: {
-    questionText: Attribute.String;
-    answerText: Attribute.Text;
-  };
-}
-
-export interface DemoDemo extends Schema.Component {
-  collectionName: 'components_demo_demos';
-  info: {
-    displayName: 'demo';
-  };
-  attributes: {
-    fieldname: Attribute.String;
-  };
-}
-
 export interface ContentsContent extends Schema.Component {
   collectionName: 'components_contents_contents';
   info: {
@@ -227,6 +206,27 @@ export interface ContentsBoxContent extends Schema.Component {
     Text: Attribute.String;
     Paragraph: Attribute.Text;
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface FaqContentFaqContent extends Schema.Component {
+  collectionName: 'components_faq_content_faq_contents';
+  info: {
+    displayName: 'faqContent';
+  };
+  attributes: {
+    questionText: Attribute.String;
+    answerText: Attribute.Text;
+  };
+}
+
+export interface DemoDemo extends Schema.Component {
+  collectionName: 'components_demo_demos';
+  info: {
+    displayName: 'demo';
+  };
+  attributes: {
+    fieldname: Attribute.String;
   };
 }
 
@@ -274,19 +274,6 @@ export interface CardDataCardData extends Schema.Component {
   attributes: {};
 }
 
-export interface BoxSideBoxSide extends Schema.Component {
-  collectionName: 'components_box_side_box_sides';
-  info: {
-    displayName: 'boxSide';
-    description: '';
-  };
-  attributes: {
-    Text: Attribute.String;
-    Paragraph: Attribute.String;
-    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-  };
-}
-
 export interface BoxBox extends Schema.Component {
   collectionName: 'components_box_boxes';
   info: {
@@ -312,6 +299,19 @@ export interface BlogDataBlogData extends Schema.Component {
   };
 }
 
+export interface BoxSideBoxSide extends Schema.Component {
+  collectionName: 'components_box_side_box_sides';
+  info: {
+    displayName: 'boxSide';
+    description: '';
+  };
+  attributes: {
+    Text: Attribute.String;
+    Paragraph: Attribute.String;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 export interface AccordianDataAccordian extends Schema.Component {
   collectionName: 'components_accordian_data_accordians';
   info: {
@@ -326,8 +326,8 @@ export interface AccordianDataAccordian extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
-      'tour-package-card.tour-package-card': TourPackageCardTourPackageCard;
       'testimonial-content.testimonial-content': TestimonialContentTestimonialContent;
+      'tour-package-card.tour-package-card': TourPackageCardTourPackageCard;
       'slides.header-slides': SlidesHeaderSlides;
       'sidebox.side-box': SideboxSideBox;
       'side-box.side-box': SideBoxSideBox;
@@ -339,17 +339,17 @@ declare module '@strapi/types' {
       'lastsection.last-section': LastsectionLastSection;
       'hometestimonial.home-testimonials': HometestimonialHomeTestimonials;
       'faq-section.faq-section': FaqSectionFaqSection;
-      'faq-content.faq-content': FaqContentFaqContent;
-      'demo.demo': DemoDemo;
       'contents.content': ContentsContent;
       'contents.box-content': ContentsBoxContent;
+      'faq-content.faq-content': FaqContentFaqContent;
+      'demo.demo': DemoDemo;
       'contact-page.contact': ContactPageContact;
       'contact-detail.contact-detail': ContactDetailContactDetail;
       'card-data.card': CardDataCard;
       'card-data.card-data': CardDataCardData;
-      'box-side.box-side': BoxSideBoxSide;
       'box.box': BoxBox;
       'blog-data.blog-data': BlogDataBlogData;
+      'box-side.box-side': BoxSideBoxSide;
       'accordian-data.accordian': AccordianDataAccordian;
     }
   }
