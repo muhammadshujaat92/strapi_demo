@@ -4,7 +4,8 @@
   "info": {
     "singularName": "tour-package",
     "pluralName": "tour-packages",
-    "displayName": "TourPackage"
+    "displayName": "TourPackage",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,14 +19,24 @@
       "type": "text"
     },
     "Banner": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "discountHeading": {
+      "type": "string"
+    },
+    "discountParagraph": {
+      "type": "text"
+    },
+    "discountBtnText": {
+      "type": "string"
     }
   }
 }

@@ -44,13 +44,8 @@
     "Days": {
       "type": "string"
     },
-    "showCard": {
-      "type": "enumeration",
-      "enum": [
-        "homePage",
-        "tourPage",
-        "tour&homePage"
-      ]
+    "showCardToHome": {
+      "type": "boolean"
     }
   }
 }

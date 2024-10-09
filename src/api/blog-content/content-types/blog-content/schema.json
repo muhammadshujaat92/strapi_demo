@@ -37,6 +37,12 @@
       "type": "component",
       "repeatable": false,
       "component": "blog-data.blog-data"
+    },
+    "admin": {
+      "displayName": "Admin",
+      "type": "component",
+      "repeatable": false,
+      "component": "blog-admin.admin"
     }
   }
 }

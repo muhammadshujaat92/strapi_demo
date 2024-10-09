@@ -1,8 +1,7 @@
 {
-  "collectionName": "components_testimonial_content_testimonial_contents",
+  "collectionName": "components_testmonial_content_contents",
   "info": {
-    "displayName": "testimonialContent",
-    "description": ""
+    "displayName": "content"
   },
   "options": {},
   "attributes": {
@@ -10,9 +9,6 @@
       "type": "text"
     },
     "AuthorName": {
-      "type": "string"
-    },
-    "AuthorDesignation": {
       "type": "string"
     },
     "AuthorCountry": {

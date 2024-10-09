@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_blog_admin_admins",
+  "info": {
+    "displayName": "Admin"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "paragraph": {
+      "type": "text"
+    }
+  }
+}

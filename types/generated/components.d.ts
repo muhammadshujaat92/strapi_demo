@@ -18,16 +18,14 @@ export interface TourPackageCardTourPackageCard extends Schema.Component {
   };
 }
 
-export interface TestimonialContentTestimonialContent extends Schema.Component {
-  collectionName: 'components_testimonial_content_testimonial_contents';
+export interface TestmonialContentContent extends Schema.Component {
+  collectionName: 'components_testmonial_content_contents';
   info: {
-    displayName: 'testimonialContent';
-    description: '';
+    displayName: 'content';
   };
   attributes: {
     ReviewText: Attribute.Text;
     AuthorName: Attribute.String;
-    AuthorDesignation: Attribute.String;
     AuthorCountry: Attribute.String;
   };
 }
@@ -162,7 +160,11 @@ export interface HometestimonialHomeTestimonials extends Schema.Component {
     Heading: Attribute.String;
     Paragraph: Attribute.Text;
     userImages: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    testimonialContent: Attribute.Component<'contents.content', true>;
+    contactTestmonialContent: Attribute.Component<
+      'testmonial-content.content',
+      true
+    >;
+    rating: Attribute.String;
   };
 }
 
@@ -195,16 +197,6 @@ export interface FaqContentFaqContent extends Schema.Component {
   };
 }
 
-export interface DemoDemo extends Schema.Component {
-  collectionName: 'components_demo_demos';
-  info: {
-    displayName: 'demo';
-  };
-  attributes: {
-    fieldname: Attribute.String;
-  };
-}
-
 export interface ContentsContent extends Schema.Component {
   collectionName: 'components_contents_contents';
   info: {
@@ -230,6 +222,16 @@ export interface ContentsBoxContent extends Schema.Component {
   };
 }
 
+export interface DemoDemo extends Schema.Component {
+  collectionName: 'components_demo_demos';
+  info: {
+    displayName: 'demo';
+  };
+  attributes: {
+    fieldname: Attribute.String;
+  };
+}
+
 export interface ContactPageContact extends Schema.Component {
   collectionName: 'components_contact_page_contacts';
   info: {
@@ -241,6 +243,20 @@ export interface ContactPageContact extends Schema.Component {
     text: Attribute.Text;
     Theme: Attribute.String;
     headingTheme: Attribute.String;
+  };
+}
+
+export interface ContactDetailGetInTouch extends Schema.Component {
+  collectionName: 'components_contact_detail_get_in_touches';
+  info: {
+    displayName: 'getInTouch';
+  };
+  attributes: {
+    heading: Attribute.String;
+    paragraph: Attribute.Text;
+    email: Attribute.String;
+    location: Attribute.String;
+    phone: Attribute.String;
   };
 }
 
@@ -274,6 +290,17 @@ export interface CardDataCardData extends Schema.Component {
   attributes: {};
 }
 
+export interface BoxBox extends Schema.Component {
+  collectionName: 'components_box_boxes';
+  info: {
+    displayName: 'box';
+  };
+  attributes: {
+    UpperText: Attribute.String;
+    LowerText: Attribute.Text;
+  };
+}
+
 export interface BoxSideBoxSide extends Schema.Component {
   collectionName: 'components_box_side_box_sides';
   info: {
@@ -287,14 +314,14 @@ export interface BoxSideBoxSide extends Schema.Component {
   };
 }
 
-export interface BoxBox extends Schema.Component {
-  collectionName: 'components_box_boxes';
+export interface BlogAdminAdmin extends Schema.Component {
+  collectionName: 'components_blog_admin_admins';
   info: {
-    displayName: 'box';
+    displayName: 'Admin';
   };
   attributes: {
-    UpperText: Attribute.String;
-    LowerText: Attribute.Text;
+    Name: Attribute.String;
+    paragraph: Attribute.Text;
   };
 }
 
@@ -327,7 +354,7 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'tour-package-card.tour-package-card': TourPackageCardTourPackageCard;
-      'testimonial-content.testimonial-content': TestimonialContentTestimonialContent;
+      'testmonial-content.content': TestmonialContentContent;
       'slides.header-slides': SlidesHeaderSlides;
       'sidebox.side-box': SideboxSideBox;
       'side-box.side-box': SideBoxSideBox;
@@ -340,15 +367,17 @@ declare module '@strapi/types' {
       'hometestimonial.home-testimonials': HometestimonialHomeTestimonials;
       'faq-section.faq-section': FaqSectionFaqSection;
       'faq-content.faq-content': FaqContentFaqContent;
-      'demo.demo': DemoDemo;
       'contents.content': ContentsContent;
       'contents.box-content': ContentsBoxContent;
+      'demo.demo': DemoDemo;
       'contact-page.contact': ContactPageContact;
+      'contact-detail.get-in-touch': ContactDetailGetInTouch;
       'contact-detail.contact-detail': ContactDetailContactDetail;
       'card-data.card': CardDataCard;
       'card-data.card-data': CardDataCardData;
-      'box-side.box-side': BoxSideBoxSide;
       'box.box': BoxBox;
+      'box-side.box-side': BoxSideBoxSide;
+      'blog-admin.admin': BlogAdminAdmin;
       'blog-data.blog-data': BlogDataBlogData;
       'accordian-data.accordian': AccordianDataAccordian;
     }

@@ -13,20 +13,24 @@
       "type": "text"
     },
     "userImages": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
-    "testimonialContent": {
-      "displayName": "Content",
+    "contactTestmonialContent": {
+      "displayName": "content",
       "type": "component",
       "repeatable": true,
-      "component": "contents.content"
+      "component": "testmonial-content.content"
+    },
+    "rating": {
+      "type": "string"
     }
   }
 }

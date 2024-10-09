@@ -34,6 +34,20 @@
         "videos",
         "audios"
       ]
+    },
+    "contactPageTestimonial": {
+      "type": "component",
+      "repeatable": false,
+      "component": "hometestimonial.home-testimonials"
+    },
+    "getInTouch": {
+      "displayName": "getInTouch",
+      "type": "component",
+      "repeatable": false,
+      "component": "contact-detail.get-in-touch"
+    },
+    "blowHeading": {
+      "type": "string"
     }
   }
 }

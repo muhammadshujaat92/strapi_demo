@@ -805,6 +805,7 @@ export interface ApiBlogContentBlogContent extends Schema.CollectionType {
     BlogCardDescription: Attribute.Text;
     BlogCardButtonText: Attribute.String;
     blogData: Attribute.Component<'blog-data.blog-data'>;
+    admin: Attribute.Component<'blog-admin.admin'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -876,7 +877,7 @@ export interface ApiCardCard extends Schema.CollectionType {
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     buttonText: Attribute.String;
     Days: Attribute.String;
-    showCard: Attribute.Enumeration<['homePage', 'tourPage', 'tour&homePage']>;
+    showCardToHome: Attribute.Boolean;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -903,6 +904,9 @@ export interface ApiContactUsContactUs extends Schema.CollectionType {
     bannerHeading: Attribute.String;
     bannerParagraph: Attribute.String;
     Banner: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    contactPageTestimonial: Attribute.Component<'hometestimonial.home-testimonials'>;
+    getInTouch: Attribute.Component<'contact-detail.get-in-touch'>;
+    blowHeading: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -914,6 +918,40 @@ export interface ApiContactUsContactUs extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::contact-us.contact-us',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiFooterFooter extends Schema.CollectionType {
+  collectionName: 'footers';
+  info: {
+    singularName: 'footer';
+    pluralName: 'footers';
+    displayName: 'Footer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    paragraph: Attribute.Text;
+    contactEmail: Attribute.String;
+    contactPhone: Attribute.String;
+    location: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::footer.footer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::footer.footer',
       'oneToOne',
       'admin::user'
     > &
@@ -995,50 +1033,13 @@ export interface ApiNavbarNavbar extends Schema.CollectionType {
   };
 }
 
-export interface ApiTestimonialTestimonial extends Schema.CollectionType {
-  collectionName: 'testimonials';
-  info: {
-    singularName: 'testimonial';
-    pluralName: 'testimonials';
-    displayName: 'Testimonial';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    ReviewText1: Attribute.Text;
-    ReviewText2: Attribute.Text;
-    ReviewText3: Attribute.Text;
-    ReviewUser1: Attribute.String;
-    ReviewUser2: Attribute.String;
-    ReviewUser3: Attribute.String;
-    Location1: Attribute.String;
-    Location2: Attribute.String;
-    Location3: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::testimonial.testimonial',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::testimonial.testimonial',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiTourPackageTourPackage extends Schema.CollectionType {
   collectionName: 'tour_packages';
   info: {
     singularName: 'tour-package';
     pluralName: 'tour-packages';
     displayName: 'TourPackage';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1047,6 +1048,9 @@ export interface ApiTourPackageTourPackage extends Schema.CollectionType {
     bannerHeading: Attribute.String;
     bannerParagraph: Attribute.Text;
     Banner: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    discountHeading: Attribute.String;
+    discountParagraph: Attribute.Text;
+    discountBtnText: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1087,9 +1091,9 @@ declare module '@strapi/types' {
       'api::blog-page.blog-page': ApiBlogPageBlogPage;
       'api::card.card': ApiCardCard;
       'api::contact-us.contact-us': ApiContactUsContactUs;
+      'api::footer.footer': ApiFooterFooter;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::navbar.navbar': ApiNavbarNavbar;
-      'api::testimonial.testimonial': ApiTestimonialTestimonial;
       'api::tour-package.tour-package': ApiTourPackageTourPackage;
     }
   }
